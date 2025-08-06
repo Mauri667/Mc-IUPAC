@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mc IUPAC - Empleado del Mes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8dc;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d40000;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1.2em;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #ffcc00;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .certificado {
+      border: 10px solid #d40000;
+      padding: 40px;
+      background-color: #fffbe6;
+      margin-top: 30px;
+      display: none;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nombre {
+      font-size: 2.5em;
+      margin: 20px 0;
+      color: #000;
+    }
+
+    .detalles {
+      font-size: 1.2em;
+      color: #333;
+      white-space: pre-line;
+    }
+
+    .firma {
+      margin-top: 50px;
+      text-align: right;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .slogan {
+      font-style: italic;
+      margin-top: 30px;
+      color: #d40000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏆 Mc IUPAC – Empleado del Mes 🧪</h1>
+
+  <div class="input-container">
+    <input type="text" id="nombre" placeholder="Ingresá tu nombre" />
+    <button onclick="generarCertificado()">Generar Certificado</button>
+  </div>
+
+  <div id="certificado" class="certificado">
+    <div style="font-size: 2em; color: #d40000;">🍔 Mc IUPAC – Sabor con Fórmula 🧪</div>
+    <div class="nombre" id="nombre-certificado">[Nombre del Empleado]</div>
+
+    <div class="detalles">
+      Por su destacada labor en la formulación, preparación y entrega de combos
+      correctamente nomenclaturados, cumpliendo con los estándares de calidad
+      de la IUPAC (Internacional Unión Para Alimentos y Compuestos).
+
+      ✔️ Estructura laboral estable (como un alcano lineal)
+      ✔️ Energía constante (como un enlace)
+      ✔️ Reactividad positiva solo bajo presión
+      ✔️ Dominio absoluto del menú sistemático
+
+      📅 Mes: Agosto 2025
+      🧾 ID de fórmula: CH₃–(CH₂)n–CH₃
+    </div>
+
+    <div class="firma">
+      ___________________________<br>
+      Dr. C. H. Burgers<br>
+      Gerente General de Cadena Carbonada
+    </div>
+
+    <div class="slogan">
+      “En Mc IUPAC, solo los mejores alcanzan la cima de la cadena”
+    </div>
+  </div>
+
+  <script>
+    function generarCertificado() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const certificado = document.getElementById('certificado');
+      const nombreCampo = document.getElementById('nombre-certificado');
+
+      if (nombre.length > 0) {
+        nombreCampo.textContent = nombre.toUpperCase();
+        certificado.style.display = 'block';
+      } else {
+        alert("Por favor, ingresá un nombre válido.");
+      }
+    }
+  </script>
+</body>
+</html>
+
